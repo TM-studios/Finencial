@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risparmio e budget</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lezioni.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="topbar">
+        <div class="logo">Finencial</div>
+        <nav>
+            <a href="../nav-link/homepage.html">Lessons</a>
+            <a href="../nav-link/feed.html">Feed</a>
+            <a href="../nav-link/assistant.html">Assistant</a>
+            <a href="../nav-link/account.html">Account</a>
+        </nav>
+    </header>
+    <main>
+    <!-- Articolo -->
+    <div class="articolo">
+        <div class="headerLezione">
+            <h1>Risparmio e budget</h1>
+            <h3>Livello: Base</h3>
+            <h3>Tempo: 12 minuti</h3>
+            <h3>Lezione numero: 3</h3>
+            <img src="../../img/lezione3/intro.jpg" alt="immagine lezione">
+        </div>
+        <div class="contenutoLezione">
+          <h2>Come fare un budget?</h2>
+          <p>Il budget aiuta a gestire entrate e uscite.<img1>Risparmiare significa mettere da parte una parte delle entrate mensili.<vid1>Consigli pratici per iniziare a risparmiare.</p>
+          <img src="../../img/lezione3/intro.jpg" alt="Esempio di budget mensile">
+        <div class="domande">
+            <h2>Quiz</h2>
+            <form id="quizForm">
+            <div class="domanda">
+                <h3>Il budget serve a:</h3>
+                    <label><input type="radio" name="q1" value="0"> Gestire soldi</label><br>
+                    <label><input type="radio" name="q1" value="1"> Giocare</label><br>
+                    <label><input type="radio" name="q1" value="2"> Investire in borsa</label><br>
+                    <label><input type="radio" name="q1" value="3"> Comprare azioni</label><br>
+            </div>
+                <button type="submit" onclick="checkQuiz()">Invia Risposte</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <script>
+        function checkQuiz() {
+            event.preventDefault();
+            let score = 0;
+            const totalQuestions = document.querySelectorAll('.domanda').length;
+            document.querySelectorAll('.domanda').forEach(q => {
+                const selected = q.querySelector('input:checked');
+                if (selected && parseInt(selected.value) === 0) score++;
+            });
+            alert(`Hai risposto correttamente a ${score} su ${totalQuestions} domande.`);
+            if (score === totalQuestions) window.location.href = "../nav-link/homepage.html";
+        }
+    </script>
+</body>
+</html>

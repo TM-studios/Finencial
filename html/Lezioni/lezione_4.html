@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimenti di base</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lezioni.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="topbar">
+        <div class="logo">Finencial</div>
+        <nav>
+            <a href="../nav-link/homepage.html">Lessons</a>
+            <a href="../nav-link/feed.html">Feed</a>
+            <a href="../nav-link/assistant.html">Assistant</a>
+            <a href="../nav-link/account.html">Account</a>
+        </nav>
+    </header>
+    <main>
+    <!-- Articolo -->
+    <div class="articolo">
+        <div class="headerLezione">
+            <h1>Investimenti di base</h1>
+            <h3>Livello: Intermedio</h3>
+            <h3>Tempo: 20 minuti</h3>
+            <h3>Lezione numero: 4</h3>
+            <img src="../img/lezione4.jpg" alt="immagine lezione">
+        </div>
+        <div class="contenutoLezione">
+          <h2>Cos'è un investimento?</h2>
+          <p>Investire significa mettere i propri soldi in strumenti per farli crescere.<img1>Tipi di investimenti: azioni, obbligazioni, ETF.<img2>Rischi e rendimento degli investimenti.</p>
+          <img src="../lezione4/img/investimenti.jpg" alt="Grafico rendimento-rischio">
+          <img src="../lezione4/img/strumenti.jpg" alt="Tipi di strumenti finanziari">
+        <div class="domande">
+            <h2>Quiz</h2>
+            <form id="quizForm">
+            <div class="domanda">
+                <h3>Qual è un tipo di investimento?</h3>
+                    <label><input type="radio" name="q1" value="0"> Azioni</label><br>
+                    <label><input type="radio" name="q1" value="1"> Risparmio sotto il materasso</label><br>
+                    <label><input type="radio" name="q1" value="2"> Debiti</label><br>
+                    <label><input type="radio" name="q1" value="3"> Giochi</label><br>
+            </div>
+                <button type="submit" onclick="checkQuiz()">Invia Risposte</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <script>
+        function checkQuiz() {
+            event.preventDefault();
+            let score = 0;
+            const totalQuestions = document.querySelectorAll('.domanda').length;
+            document.querySelectorAll('.domanda').forEach(q => {
+                const selected = q.querySelector('input:checked');
+                if (selected && parseInt(selected.value) === 0) score++;
+            });
+            alert(`Hai risposto correttamente a ${score} su ${totalQuestions} domande.`);
+            if (score === totalQuestions) window.location.href = "../nav-link/homepage.html";
+        }
+    </script>
+</body>
+</html>

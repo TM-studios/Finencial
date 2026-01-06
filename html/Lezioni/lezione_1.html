@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione a Finencial</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lezioni.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="topbar">
+        <div class="logo">Finencial</div>
+        <nav>
+            <a href="../nav-link/homepage.html">Lessons</a>
+            <a href="../nav-link/feed.html">Feed</a>
+            <a href="../nav-link/assistant.html">Assistant</a>
+            <a href="../nav-link/account.html">Account</a>
+        </nav>
+    </header>
+    <main>
+    <!-- Articolo -->
+    <div class="articolo">
+        <div class="headerLezione">
+            <h1>Introduzione a Finencial</h1>
+            <h3>Livello: Base</h3>
+            <h3>Tempo: 10 minuti</h3>
+            <h3>Lezione numero: 1</h3>
+            <img src="../../img/lezione1/intro.jpg" alt="immagine lezione">
+        </div>
+        <div class="contenutoLezione">
+          <h2>Cos'è Finencial?</h2>
+          <p>Finencial è una piattaforma educativa per imparare a gestire il denaro.<img1>Permette di seguire lezioni, fare quiz e monitorare i propri progressi.<vid1></p>
+          <img src="../../img/lezione1/intro.jpg" alt="Logo Finencial">
+        <div class="domande">
+            <h2>Quiz</h2>
+            <form id="quizForm">
+            <div class="domanda">
+                <h3>Che tipo di piattaforma è Finencial?</h3>
+                    <label><input type="radio" name="q1" value="0"> Educativa</label><br>
+                    <label><input type="radio" name="q1" value="1"> Social</label><br>
+                    <label><input type="radio" name="q1" value="2"> Giochi</label><br>
+                    <label><input type="radio" name="q1" value="3"> Musicale</label><br>
+            </div>
+                <button type="submit" onclick="checkQuiz()">Invia Risposte</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <script>
+        function checkQuiz() {
+            event.preventDefault();
+            let score = 0;
+            const totalQuestions = document.querySelectorAll('.domanda').length;
+            document.querySelectorAll('.domanda').forEach(q => {
+                const selected = q.querySelector('input:checked');
+                if (selected && parseInt(selected.value) === 0) score++;
+            });
+            alert(`Hai risposto correttamente a ${score} su ${totalQuestions} domande.`);
+            if (score === totalQuestions) window.location.href = "../nav-link/homepage.html";
+        }
+    </script>
+</body>
+</html>

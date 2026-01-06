@@ -1,0 +1,62 @@
+[
+    {
+        "IDlezione": 1,
+        "titolo": "Introduzione a Finencial",
+        "livello": 0,
+        "tempo": 10,
+        "imgLezione": "../img/lezione1.jpg",
+        "testo": "<sb>Cos'è Finencial?</sb>Finencial è una piattaforma educativa per imparare a gestire il denaro.<img1>Permette di seguire lezioni, fare quiz e monitorare i propri progressi.<vid1>",
+        "file": [
+            { "id": "img1", "tipo": "immagine", "src": "../lezione1/img/intro.jpg", "descrizione": "Logo Finencial" },
+            { "id": "vid1", "tipo": "video", "src": "../lezione1/video/presentazione.mp4", "descrizione": "Video introduttivo" }
+        ],
+        "quiz": [
+            { "id":"q1", "tipo":"multipla", "domanda":"Che tipo di piattaforma è Finencial?", "risposte":["Educativa","Social","Giochi","Musicale"], "risCorretta":0 }
+        ]
+    },
+    {
+        "IDlezione": 2,
+        "titolo": "Nozioni di base di economia",
+        "livello": 0,
+        "tempo": 15,
+        "imgLezione": "../img/lezione2.jpg",
+        "testo": "<sb>Cos'è l'economia?</sb>L'economia studia come le risorse vengono distribuite.<img1>Concetti base: domanda, offerta, mercato.<img2>Importanza della gestione del denaro personale.",
+        "file": [
+            { "id": "img1", "tipo": "immagine", "src": "../lezione2/img/economia1.jpg", "descrizione": "Grafico domanda-offerta" },
+            { "id": "img2", "tipo": "immagine", "src": "../lezione2/img/economia2.jpg", "descrizione": "Bilancio familiare" }
+        ],
+        "quiz": [
+            { "id":"q1", "tipo":"veroFalso", "domanda":"L'economia studia la distribuzione delle risorse.", "risposte":["Falso","Vero"], "risCorretta":1 }
+        ]
+    },
+    {
+        "IDlezione": 3,
+        "titolo": "Risparmio e budget",
+        "livello": 0,
+        "tempo": 12,
+        "imgLezione": "../img/lezione3.jpg",
+        "testo": "<sb>Come fare un budget?</sb>Il budget aiuta a gestire entrate e uscite.<img1>Risparmiare significa mettere da parte una parte delle entrate mensili.<vid1>Consigli pratici per iniziare a risparmiare.",
+        "file": [
+            { "id": "img1", "tipo": "immagine", "src": "../lezione3/img/budget.jpg", "descrizione": "Esempio di budget mensile" },
+            { "id": "vid1", "tipo": "video", "src": "../lezione3/video/risparmio.mp4", "descrizione": "Video risparmio pratico" }
+        ],
+        "quiz": [
+            { "id":"q1", "tipo":"multipla", "domanda":"Il budget serve a:", "risposte":["Gestire soldi","Giocare","Investire in borsa","Comprare azioni"], "risCorretta":0 }
+        ]
+    },
+    {
+        "IDlezione": 4,
+        "titolo": "Investimenti di base",
+        "livello": 1,
+        "tempo": 20,
+        "imgLezione": "../img/lezione4.jpg",
+        "testo": "<sb>Cos'è un investimento?</sb>Investire significa mettere i propri soldi in strumenti per farli crescere.<img1>Tipi di investimenti: azioni, obbligazioni, ETF.<img2>Rischi e rendimento degli investimenti.",
+        "file": [
+            { "id": "img1", "tipo": "immagine", "src": "../lezione4/img/investimenti.jpg", "descrizione": "Grafico rendimento-rischio" },
+            { "id": "img2", "tipo": "immagine", "src": "../lezione4/img/strumenti.jpg", "descrizione": "Tipi di strumenti finanziari" }
+        ],
+        "quiz": [
+            { "id":"q1", "tipo":"multipla", "domanda":"Qual è un tipo di investimento?", "risposte":["Azioni","Risparmio sotto il materasso","Debiti","Giochi"], "risCorretta":0 }
+        ]
+    }
+]

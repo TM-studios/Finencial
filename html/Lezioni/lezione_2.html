@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nozioni di base di economia</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lezioni.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="topbar">
+        <div class="logo">Finencial</div>
+        <nav>
+            <a href="../nav-link/homepage.html">Lessons</a>
+            <a href="../nav-link/feed.html">Feed</a>
+            <a href="../nav-link/assistant.html">Assistant</a>
+            <a href="../nav-link/account.html">Account</a>
+        </nav>
+    </header>
+    <main>
+    <!-- Articolo -->
+    <div class="articolo">
+        <div class="headerLezione">
+            <h1>Nozioni di base di economia</h1>
+            <h3>Livello: Base</h3>
+            <h3>Tempo: 15 minuti</h3>
+            <h3>Lezione numero: 2</h3>
+            <img src="../img/lezione2.jpg" alt="immagine lezione">
+        </div>
+        <div class="contenutoLezione">
+          <h2>Cos'è l'economia?</h2>
+          <p>L'economia studia come le risorse vengono distribuite.<img1>Concetti base: domanda, offerta, mercato.<img2>Importanza della gestione del denaro personale.</p>
+          <img src="../lezione2/img/economia1.jpg" alt="Grafico domanda-offerta">
+          <img src="../lezione2/img/economia2.jpg" alt="Bilancio familiare">
+        <div class="domande">
+            <h2>Quiz</h2>
+            <form id="quizForm">
+            <div class="domanda">
+                <h3>L'economia studia la distribuzione delle risorse.</h3>
+                    <label><input type="radio" name="q1" value="0"> Falso</label><br>
+                    <label><input type="radio" name="q1" value="1"> Vero</label><br>
+            </div>
+                <button type="submit" onclick="checkQuiz()">Invia Risposte</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <script>
+        function checkQuiz() {
+            event.preventDefault();
+            let score = 0;
+            const totalQuestions = document.querySelectorAll('.domanda').length;
+            document.querySelectorAll('.domanda').forEach(q => {
+                const selected = q.querySelector('input:checked');
+                if (selected && parseInt(selected.value) === 0) score++;
+            });
+            alert(`Hai risposto correttamente a ${score} su ${totalQuestions} domande.`);
+            if (score === totalQuestions) window.location.href = "../nav-link/homepage.html";
+        }
+    </script>
+</body>
+</html>
