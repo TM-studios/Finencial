@@ -1,4 +1,4 @@
-const validCodes = ["FINENCIALBETA261", "FINENCIALBETA262"];
+const validCodes = ["FINENCIALBETA261", "FINENCIALBETA262", "FINENCIALBETA263"];
 
 const input = document.getElementById("betaCode");
 const button = document.getElementById("enterBtn");
