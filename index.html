@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Demo login</title>
+    <link rel="stylesheet" href="css/demopage.css">
 </head>
 <body>
-    <h1>Welcome to Finencial</h1>
+    <main>
+        <div class="enter-beta-ctn">
+            <h1>Demo di Finencial</h1>
 
-    <ul>
-        <li><a href="html/nav-link/account.html">Account</a></li>
-        <li><a href="html/nav-link/feed.html">Feed</a></li>
-        <li><a href="html/nav-link/assistant.html">Assistant</a></li>
-        <li><a href="html/nav-link/homepage.html">Lessons</a></li>
-    </ul>
+            <input 
+                type="password" 
+                id="betaCode" 
+                placeholder="Inserisci il codice sviluppatore"
+                autocomplete="off"
+            >
+
+            <button id="enterBtn">Enter</button>
+
+            <p id="errorMsg"></p>
+        </div>
+    </main>
+
+    <script src="js/demo.js"></script>
 </body>
 </html>
