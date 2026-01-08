@@ -10,40 +10,16 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Georgia", serif;
 }
 
 body {
-  margin: 0;
   background: var(--bg);
   color: #000;
 }
 
-/* Header */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 48px;
-}
-
-.logo {
-  font-size: 28px;
-}
-
-nav a {
-  margin-left: 24px;
-  text-decoration: none;
-  color: #000;
-  opacity: 0.6;
-}
-
-nav a.active {
-  background: #f1f1f1;
-  padding: 8px 16px;
-  border-radius: 999px;
-  opacity: 1;
-}
 
 /* Main */
 main {

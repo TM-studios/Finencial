@@ -6,16 +6,24 @@
     <title>Risparmio e budget</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lezioni.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
 </head>
 <body>
     <!-- Header -->
     <header class="topbar">
         <div class="logo">Finencial</div>
-        <nav>
+
+        <button class="hamburger" aria-label="Apri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="nav-links">
             <a href="../nav-link/homepage.html">Lessons</a>
             <a href="../nav-link/feed.html">Feed</a>
             <a href="../nav-link/assistant.html">Assistant</a>
-            <a href="../nav-link/account.html">Account</a>
+            <a href="../login.html">Account</a>
         </nav>
     </header>
     <main>
@@ -60,5 +68,7 @@
             if (score === totalQuestions) window.location.href = "../nav-link/homepage.html";
         }
     </script>
+
+    <script src="../../js/navbar.js"></script>
 </body>
 </html>
