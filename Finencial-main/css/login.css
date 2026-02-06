@@ -1,0 +1,142 @@
+:root {
+    --bg: #ffffff;
+    --card: #ffffff;
+    --card-locked: #bfbfbf;
+    --muted: #777;
+    --accent: #9bc88d;
+    --black: #000;
+    --radius: 24px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box{
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+
+.box h1{
+    color: var(--black);
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 20px;
+}
+
+.inputBox span{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.inputBox input{
+    background-color: white;
+    border: solid 2px var(--muted);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.inputBox input:focus{
+    outline: none;
+    border-color: var(--accent);
+}
+
+.Login{
+    background-color: var(--accent);
+    padding: 10px 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    color: var(--bg);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.Login:hover{
+    background-color: #7fbf6e;
+}
+
+.links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+
+hr{
+    margin: 0px 0;
+    border: none;
+    border-top: 1px solid var(--muted);
+}
+
+.altro{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.button{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+}
+
+.button img{
+    width: 25px;
+
+}
+
+.google{
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    padding: 10px 20px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.apple{
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+}

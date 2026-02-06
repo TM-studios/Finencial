@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finencial – Learn to manage your money</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+    <style>
+
+        /* ===============================
+   RESET BASE
+================================ */
+.homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    color: #111;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+    max-width: 720px;
+    margin-bottom: 120px;
+}
+
+.hero h1 {
+    font-family: "Georgia", serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 520px;
+    margin-bottom: 40px;
+}
+
+/* CTA */
+.cta-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background-color: #9BC88D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   ABOUT
+================================ */
+.about {
+    max-width: 700px;
+    margin-bottom: 120px;
+}
+
+.about h2 {
+    font-family: "Georgia", serif;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+/* ===============================
+   FEATURES
+================================ */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-bottom: 140px;
+}
+
+.feature h3 {
+    font-family: "Georgia", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ===============================
+   PATH
+================================ */
+.path {
+    max-width: 640px;
+    margin-bottom: 140px;
+}
+
+.path h2 {
+    font-family: "Georgia", serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.path p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* ===============================
+   FINAL CTA
+================================ */
+.final-cta {
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.final-cta h2 {
+    font-family: "Georgia", serif;
+    font-size: 36px;
+    margin-bottom: 28px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+    .features {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 600px) {
+    .homepage {
+        padding: 60px 24px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+    </style>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="topbar">
+        <div class="logo">Finencial</div>
+
+        <nav class="nav-links">
+            <a href="html/nav-link/homepage.html">Lessons</a>
+            <a href="html/nav-link/feed.html">Feed</a>
+            <a href="html/nav-link/assistant.html">Assistant</a>
+            <a href="html/login.html">Account</a>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <main class="homepage">
+
+        <section class="hero">
+            <h1>Learn how money really works.</h1>
+            <p>
+                Finencial is an educational platform designed to help you understand, 
+                manage your money — step by step.
+            </p>
+
+            <a href="html/nav-link/homepage.html" class="cta-btn">Start learning</a>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about">
+            <h2>What is Finencial?</h2>
+
+            <p>
+                Finencial is a modern learning experience focused on financial education.
+                We believe everyone should understand money, regardless of age or background.
+            </p>
+
+            <p>
+                Through short lessons, practical examples and interactive quizzes,
+                Finencial helps you build solid financial foundations.
+            </p>
+        </section>
+
+        <!-- ================= FEATURES ================= -->
+        <section class="features">
+            <div class="feature">
+                <h3>📘 Simple lessons</h3>
+                <p>
+                    Learn complex financial concepts explained in a clear and simple way.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🧠 Interactive quizzes</h3>
+                <p>
+                    Test your knowledge and unlock new lessons as you progress.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= PATH ================= -->
+        <section class="path">
+            <h2>Your learning path</h2>
+
+            <p>
+                Lessons are organized by level. Complete one lesson to unlock the next.
+                Build your knowledge step by step, without rushing.
+            </p>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="final-cta">
+            <h2>Ready to start?</h2>
+            <a href="html/nav-link/homepage.html" class="cta-btn">Go to lessons</a>
+        </section>
+
+    </main>
+
+</body>
+</html>

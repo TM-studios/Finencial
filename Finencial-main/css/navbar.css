@@ -1,0 +1,76 @@
+/* Header */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+nav a {
+    margin: 24px;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #f1f1f1;
+    padding: 8px 16px;
+    border-radius: 999px;
+    opacity: 1;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background: #000;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .topbar {
+        padding: 20px 24px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 24px;
+        background: #fff;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        border-radius: 16px;
+        display: none;
+        flex-direction: column;
+        min-width: 180px;
+        padding: 12px 0;
+        z-index: 1000;
+    }
+
+    .nav-links a {
+        margin: 0;
+        padding: 12px 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
