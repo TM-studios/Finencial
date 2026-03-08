@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 130px;
+}
+
+.container p{
+    color: #fff;
+    font-size: 50px;
+}
+
+.container p span{
+    text-decoration: underline; 
+    text-decoration-color: var(--violet); 
+    text-underline-offset: 4px;
+}
+
+.abbonamenti{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.title{
+    margin: 25px 25px;
+    font-size: 32px;
+}
+
+.price, currency, amount{
+    margin: 25px 25px;
+    font-size: 32px;
+    justify-items: center;
+    align-items: center;
+}
+
+.period{
+    font-size: 15px;
+    color: gray;
+}
+
+ul{
+    margin: 25px 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn{
+    margin: 25px 25px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--violet);
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid var(--violet);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: var(--violetGlass1);
+    cursor: pointer;
+}
+
+
+
+.highlighted{
+    margin-bottom: 20px;
+}
+

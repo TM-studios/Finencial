@@ -1,0 +1,145 @@
+/* Header */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Cambiato da 0 a border-box */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin-bottom: 134px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 48px;
+    background-color: rgba(15, 15, 15, 0.95);
+    color: white;
+    border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.topbar.scrolled {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #333;
+    transition: 0.5s;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+    padding-left: 20px;
+}
+
+.nav-links{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+nav a {
+    margin: 24px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+    color: #D5D5D5;
+}
+
+nav a:hover {
+    color: var(--violet);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 0;
+    padding-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .topbar {
+        padding: 20px 24px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 24px;
+        background: #191919;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        border-radius: 16px;
+        display: none;
+        flex-direction: column;
+        min-width: 180px;
+        padding: 12px 0;
+        z-index: 1000;
+    }
+
+    .nav-links a {
+        margin: 0;
+        padding: 12px 20px;
+        color:white;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .topbar.scrolled {
+        padding: 15px 48px;
+        backdrop-filter: blur(4px);
+        border-bottom: 1px solid #333;
+        transition: 0.5s;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0 20px 0; /* Più spazio sopra per staccarlo dai contenuti */
+    color: gray;
+    
+    /* Rimuoviamo position: fixed e width: 99% */
+    position: relative; 
+    clear: both;
+    
+    /* Creiamo lo spazio a destra e sinistra della linea */
+    margin: 0 20px; /* Cambia 48px con quanto spazio vuoi lasciare ai lati */
+    border-top: 1px solid gray;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

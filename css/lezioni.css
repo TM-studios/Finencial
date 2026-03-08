@@ -1,0 +1,166 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #191919;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    max-width: 800px;   
+    width: 100%;        
+    margin: 0 auto;     
+    text-align: left;
+}
+
+.headerLezione {
+    margin-top: 96px;
+    text-align: left;
+}
+
+.headerLezione h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.headerLezione h3{
+    font-size: 15px;
+    color: gray;
+}
+
+.headerLezione img,video{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 25px;
+    display: block;
+    margin-top: 10px;
+}
+
+.contenutoLezione{
+    margin-top: 30px;
+    line-height: 1.6;
+    color: white;
+}
+
+.contenutoLezione h2{
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.contenutoLezione p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.contenutoLezione img{
+    border-radius: 25px;
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.domande{
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #151515;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.domande h2{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.domande h3{
+    font-size: 22px;
+}
+
+.domande label{
+    font-size: 18px;
+    margin: 10px;
+}
+
+.domande label input{
+    margin-top: 5px;
+}
+
+.domanda{
+    margin-bottom: 20px;
+}
+
+input[type="radio"]{
+    accent-color: #8f00ff;
+}
+
+
+button{
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #8f00ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.domanda button:hover {
+    background-color: #7003c4;
+    cursor: pointer;
+}
+
+.domanda label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    main{
+        padding: 20px;
+    }
+    .headerLezione h1{
+        font-size: 32px;
+    }
+
+    .headerLezione h3{
+        font-size: 12px;
+    }
+
+    .contenutoLezione h2{
+        font-size: 20px;
+    }
+
+    .contenutoLezione p{
+        font-size: 15px;
+    }
+
+    .domande h2{
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .domande h3{
+        font-size: 16px;
+    }
+
+    .domande label{
+        font-size: 14px;
+        margin: 10px;
+    }
+
+}
