@@ -222,3 +222,25 @@ section{
         font-size: 40px;
     }
 }
+
+section.trustBar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    background-color: var(--gray);
+    padding: 50px;
+}
+
+section.trustBar a img {
+    height: auto;
+    width: 150px;
+    filter: grayscale(100%) opacity(0.6); 
+    transition: 0.3s ease;
+}
+
+section.trustBar img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}

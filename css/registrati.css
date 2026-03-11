@@ -1,0 +1,176 @@
+:root {
+    --radius: 24px;
+    --violet: #8f00ff;
+    --violetGlass: rgba(143, 0, 255, 0.4);
+    --violetGlass1: rgba(143, 0, 255, 0.7);
+    --bg: #121212;
+    --bgGlass: rgba(255, 255, 255, 0.05);
+    --muted: #888;
+}
+
+/* Reset Generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 0;
+}
+
+/* 🟢 FIX AUTOFILL: Impedisce lo sfondo bianco sulla mail */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* BOX REGISTRAZIONE */
+.box {
+    width: 95%;
+    max-width: 550px;
+    padding: 40px;
+    text-align: center;
+    
+    /* 🟢 SPAZIATURA: 180px sopra (per la navbar) e 100px sotto */
+    margin-top: 180px;
+    margin-bottom: 100px; 
+    z-index: 1;
+}
+
+.box h1 {
+    color: white;
+    margin-bottom: 35px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* LAYOUT RIGHE */
+.info {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 25px; /* Spazio tra le righe di input */
+    flex: 1;
+}
+
+.inputBox span {
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.inputBox input {
+    background-color: var(--bgGlass);
+    border: 2px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 14px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.inputBox input:focus {
+    outline: none;
+    border-color: var(--violet);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(143, 0, 255, 0.2);
+}
+
+/* DATA DI NASCITA */
+.birth-inputs {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.birth-inputs input {
+    text-align: center;
+    flex: 1;
+}
+
+/* RIMUOVERE FRECCETTE */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] { -moz-appearance: textfield; }
+
+/* BOTTONE */
+.Login {
+    background-color: var(--violet);
+    border: solid 2px var(--violet);
+    padding: 16px;
+    margin: 10px 0 25px 0;
+    width: 100%;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    transition: 0.3s;
+}
+
+.Login:hover {
+    background-color: var(--violetGlass);
+    transform: scale(1.01);
+}
+
+/* LINKS */
+.links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.links a:hover { color: var(--violet); }
+
+/* 🟢 FOOTER FIX */
+footer {
+    margin-top: auto; /* Spinge il footer in fondo */
+    width: 100%;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #555;
+    background: var(--bg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .info { flex-direction: column; gap: 0; }
+    .box {
+        margin-top: 130px;
+        margin-bottom: 50px;
+        padding: 30px 20px;
+    }
+    .box h1 { font-size: 32px; }
+}
