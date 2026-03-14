@@ -134,7 +134,7 @@ input[type=number] { -moz-appearance: textfield; }
 }
 
 .Login:hover {
-    background-color: var(--violetGlass);
+    background-color: var(--violetGlass1);
     transform: scale(1.01);
 }
 

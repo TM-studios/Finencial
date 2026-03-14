@@ -155,7 +155,7 @@ section{
 
 .pilastri h1{
     font-size: 50px;
-    color: var(--violet);
+    color: white;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -184,7 +184,7 @@ section{
     background-color: var(--violetGlass1);
     cursor: pointer;
     border-color: var(--violet);
-    transform: rotateZ(-5deg) scale(1.05) ;
+    transform:scale(1.05) ;
 }
 
 .icon{
@@ -243,4 +243,127 @@ section.trustBar a img {
 section.trustBar img:hover {
     filter: grayscale(0%) opacity(1);
     transform: scale(1.1);
+}
+
+/* --- SEZIONE STATS OTTIMIZZATA --- */
+.stats {
+    padding: 120px 20px; /* Aumentato lo spazio verticale */
+    background: radial-gradient(circle at center, #1e1e1e 0%, var(--bg) 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.stats h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #fff;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px; /* Spazio generoso tra i numeri */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item .number {
+    font-size: 50px; /* Numeri più grandi e d'impatto */
+    font-weight: 800;
+    color: var(--violet);
+    display: block;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #b0b0b0; /* Grigio chiaro per non appesantire */
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* --- ADATTAMENTO MOBILE --- */
+@media (max-width: 768px) {
+    .stats {
+        padding: 80px 15px;
+    }
+    
+    .stats h2 {
+        font-size: 1.8rem;
+    }
+
+    .stat-item .number {
+        font-size: 60px;
+    }
+    
+    .stats-grid {
+        gap: 40px;
+    }
+}
+
+/* --- STILE DESKTOP (Default) --- */
+.final-cta {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--violet);
+    color: white;
+}
+
+.final-cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 50px;
+    background: white;
+    color: var(--violet);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- ADATTAMENTO PER MOBILE (Smartphone) --- */
+@media (max-width: 768px) {
+    .final-cta {
+        padding: 60px 15px; /* Riduciamo il padding per non sprecare spazio */
+    }
+
+    .final-cta h2 {
+        font-size: 28px; /* Testo più piccolo per evitare che vada su troppe righe */
+    }
+
+    .final-cta p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .btn-main {
+        display: block; /* Il bottone diventa largo quanto lo schermo */
+        width: 100%; 
+        max-width: 300px; /* Ma non troppo largo */
+        margin: 30px auto 0; 
+        padding: 20px; /* Più alto per essere cliccato facilmente con il pollice */
+        font-size: 20px; /* Testo leggibile */
+    }
 }
