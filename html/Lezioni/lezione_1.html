@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lezioni.css">
     <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/colori.css">
 
     <link rel="icon" href="../../logo/Gemini_Generated_Image_4a7n3m4a7n3m4a7n-removebg-preview.png">
 </head>
@@ -43,13 +44,14 @@
         <div class="articolo">
 
             <div class="headerLezione">
-                <h1>Introduzione a Finencial</h1>
-                <h3>Livello: base</h3>
-                <h3>Tempo: 10 minuti</h3>
-                <h3>Lezione numero: 1</h3>
-                
-                <img src="../../img/lezione1/intro.jpg" alt="immagine lezione">
-            </div>
+    <h1>Introduzione a Finencial</h1>
+    <div class="info-badges">
+        <span class="badge">Livello: Base</span>
+        <span class="badge">⏱ 10 minuti</span>
+        <span class="badge">Lezione 1</span>
+    </div>
+    <img src="../../img/lezione1/intro.jpg" alt="immagine lezione">
+</div>
 
             <div class="contenutoLezione">
                 <h2>Chi è Finencial</h2>
@@ -123,14 +125,31 @@
 
                     <div class="domanda">
                         <h3>Qual è l'obiettivo primario che ha portato alla nascita di Finencial?</h3>
-                        <label><input type="radio" name="q1" value="0"> Offrire consulenza finanziaria personalizzata per investimenti ad alto rischio.</label>
-                        <label><input type="radio" name="q1" value="1"> Contribuire allo sviluppo di una società economicamente più consapevole e resiliente.</label>
-                        <label><input type="radio" name="q1" value="0"> Sostituire completamente gli istituti bancari nella gestione del risparmio privato.</label>
-                        <label><input type="radio" name="q1" value="0"> Fornire prestiti a tassi agevolati per studenti universitari meritevoli.</label>
+    
+                        <label class="radio-container">
+                            <input type="radio" name="q1" value="0"> 
+                            <span>Offrire consulenza finanziaria personalizzata per investimenti ad alto rischio.</span>
+                        </label>
+                    
+                        <label class="radio-container">
+                            <input type="radio" name="q1" value="1"> 
+                            <span>Contribuire allo sviluppo di una società economicamente più consapevole e resiliente.</span>
+                        </label>
+                    
+                        <label class="radio-container">
+                            <input type="radio" name="q1" value="0"> 
+                            <span>Sostituire completamente gli istituti bancari nella gestione del risparmio privato.</span>
+                        </label>
+                    
+                        <label class="radio-container">
+                            <input type="radio" name="q1" value="0"> 
+                            <span>Fornire prestiti a tassi agevolati per studenti universitari meritevoli.</span>
+                        </label>
                     </div>
 
                     <button type="submit" onclick="checkQuiz()">Invia Risposte</button>
                 </form>
+                
             </div>
 
         </div>
