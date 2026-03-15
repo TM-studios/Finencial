@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registrati</title>
 
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/colori.css">
@@ -42,49 +42,49 @@
     <div class="box">
     <h1>Registrati</h1>
     
-    <form id="registerForm">
-        <div class="info">
-            <div class="inputBox">
-                <span>Nome</span>
-                <input type="text" id="nome" required placeholder="Mario">
-            </div>
-            <div class="inputBox">
-                <span>Cognome</span>
-                <input type="text" id="cognome" required placeholder="Rossi">
-            </div>
-        </div>
-
-        <div class="info">
-            <div class="inputBox birth-group">
-                <span>Data di nascita</span>
-                <div class="birth-inputs">
-                    <input type="number" id="day" placeholder="GG" min="1" max="31" required>
-                    <input type="number" id="month" placeholder="MM" min="1" max="12" required>
-                    <input type="number" id="year" placeholder="AAAA" min="1900" max="2026" required>
-                </div>
-            </div>
-        </div>
-
+    <!-- <form id="registerForm"> -->
+    <form action="salva_utente.php" method="POST" id="registerForm">
+    <div class="info">
         <div class="inputBox">
-            <span>Email</span>
-            <input type="email" id="email" required placeholder="rossi.mario@gmail.com">
+            <span>Nome</span>
+            <input type="text" name="nome" id="nome" required placeholder="Mario">
         </div>
+        <div class="inputBox">
+            <span>Cognome</span>
+            <input type="text" name="cognome" id="cognome" required placeholder="Rossi">
+        </div>
+    </div>
 
-        <div class="info">
-            <div class="inputBox">
-                <span>Password</span>
-                <input type="password" id="password" required placeholder="Password">
-            </div>
-            <div class="inputBox">
-                <span>Ripeti Password</span>
-                <input type="password" id="confirmPassword" required placeholder="Ripeti password">
+    <div class="info">
+        <div class="inputBox birth-group">
+            <span>Data di nascita</span>
+            <div class="birth-inputs">
+                <input type="number" name="day" id="day" placeholder="GG" min="1" max="31" required>
+                <input type="number" name="month" id="month" placeholder="MM" min="1" max="12" required>
+                <input type="number" name="year" id="year" placeholder="AAAA" min="1900" max="2026" required>
             </div>
         </div>
+    </div>
 
-        <p id="error-msg" style="color: #ff4d4d; font-size: 14px; margin-top: 10px; display: none;"></p>
+    <div class="inputBox">
+        <span>Email</span>
+        <input type="email" name="email" id="email" required placeholder="rossi.mario@gmail.com">
+    </div>
 
-        <input type="submit" value="Registrati" class="Login">
-    </form>
+    <div class="info">
+        <div class="inputBox">
+            <span>Password</span>
+            <input type="password" name="password" id="password" required placeholder="Password">
+        </div>
+        <div class="inputBox">
+            <span>Ripeti Password</span>
+            <input type="password" id="confirmPassword" required placeholder="Ripeti password">
+        </div>
+    </div>
+
+    <p id="error-msg" style="color: #ff4d4d; font-size: 14px; margin-top: 10px; display: none;"></p>
+    <input type="submit" value="Registrati" class="Login">
+</form>
 
     <div class="links">
         <a href="#">Password dimenticata</a>

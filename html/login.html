@@ -40,35 +40,29 @@
 
 
     <div class="box">
-        <h1>Login</h1>
-            <div class="inputBox">
-                <span>Email</span>
-                <input
-                    type="email" 
-                    required="required"
-                    placeholder="rossi.mario@gmail.com"
-                >
-            </div>
+    <h1>Login</h1>
 
-            <div class="inputBox">
-                <span>Password</span>
-                <input 
-                    type="password"
-                    required="required"
-                >
-            </div>
+    <form action="login_utente.php" method="POST">
 
-            
-            <input type="submit" value="Login" class="Login">
+        <div class="inputBox">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="rossi.mario@gmail.com">
+        </div>
 
+        <div class="inputBox">
+            <span>Password</span>
+            <input type="password" name="password" required>
+        </div>
 
+        <input type="submit" value="Login" class="Login">
 
-            <div class="links">
-                <a href="#">Password dimenticata</a>
-                <a href="registrati.html">Register</a>
-            </div>
+    </form>
 
+    <div class="links">
+        <a href="#">Password dimenticata</a>
+        <a href="registrati.html">Register</a>
     </div>
+</div>
     <footer>
         <p>© 2026 Finencial. Tutti i diritti riservati.</p>
     </footer>
