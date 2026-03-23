@@ -1,0 +1,55 @@
+:root {
+    --bg: #ffffff;
+    --card: #ffffff;
+    --card-locked: #bfbfbf;
+    --muted: #777;
+    --accent: #9bc88d;
+    --black: #000;
+    --radius: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #000;
+}
+
+/* Header */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.6;
+}
+
+nav a.active {
+    background: #f1f1f1;
+    padding: 8px 16px;
+    border-radius: 999px;
+    opacity: 1;
+}
+
+/* Main */
+main {
+    padding: 40px 48px;
+}
+
+section {
+    margin-bottom: 80px;
+}

@@ -1,0 +1,12 @@
+:root{
+    --bg: #191919;
+    --bgGlass: rgba(25, 25, 25, 0.8);
+    --violet: #8f00ff;
+    --violetGlass: rgba(143, 0, 255, 0.8);
+    --violetGlass1: rgba(143, 0, 255, 0.5);
+    --gray: #272727;
+
+    --rosso: rgb(255,0,0);
+    --rossoGlass: rgba(255,0,0,0.5);
+}
+

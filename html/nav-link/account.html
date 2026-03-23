@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Finencial</title>
+
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/registrati.css">
+    <link rel="stylesheet" href="../../css/colori.css">
+    <link rel="stylesheet" href="../../css/nav-link/account.css">
+
+    <link rel="icon" href="../../logo/icon.jpeg?v=1" type="image/jpeg">
+
+    <style>
+        /* FIX per email che esce fuori dal box su mobile */
+        .accountContainer p {
+            word-break: break-all; /* Forza il testo lungo (come le email) ad andare a capo */
+            overflow-wrap: break-word;
+            display: flex;
+            flex-wrap: wrap; /* Permette al contenuto di scendere sotto l'etichetta se non c'è spazio */
+            align-items: center;
+        }
+
+        .accountContainer p strong {
+            min-width: 120px;
+            display: inline-block;
+        }
+
+        /* Ottimizzazione per schermi molto piccoli */
+        @media (max-width: 400px) {
+            .accountContainer p {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="logo">
+            <a href="../../index.html"><img src="../../logo/Gemini_Generated_Image_4a7n3m4a7n3m4a7n-removebg-preview.png" alt="Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="homepage.html">Lessons</a>
+            <a href="feed.html">Feed</a>
+            <a href="assistant.html">Assistant</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="">Account</a>
+        </nav>
+    </header>
+
+    <div class="accountContainer">
+    <div class="profilePic">
+        <img src="../../icon/user.png" alt="utente">
+    </div>
+    
+    <p><strong>Nome:</strong> <span id="db-nome">...</span></p>
+    <p><strong>Cognome:</strong> <span id="db-cognome">...</span></p>
+    <p><strong>Email:</strong> <span id="db-email" style="word-break: break-all;">...</span></p>
+    <p><strong>Telefono:</strong> <span id="db-telefono">...</span></p>
+
+    <div class="buttons">
+        <a href="../../php/logout.php" id="disconetti">Disconnetti</a>
+        <a href="../../php/elimina_account.php" id="elimina" onclick="return confirm('Sicuro?')">Elimina account</a>
+    </div>
+</div>
+
+<script>
+    // Questo script "chiama" il file PHP e mette i dati al posto giusto
+    fetch('../../php/get_user_info.php')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('db-nome').innerText = data.Nome;
+            document.getElementById('db-cognome').innerText = data.Cognome;
+            document.getElementById('db-email').innerText = data.Email;
+            document.getElementById('db-telefono').innerText = data.Telefono;
+        });
+</script>
+</body>
+</html>

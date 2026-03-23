@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/registrati.css">
+    <link rel="stylesheet" href="../css/colori.css">
+
+    <link rel="icon" href="../logo/icon.jpeg">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+    
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../logo/Gemini_Generated_Image_4a7n3m4a7n3m4a7n-removebg-preview.png" alt="Logo Finencial">
+            </a>
+        </div>
+
+        <button class="hamburger" aria-label="Apri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links">
+            <a href="nav-link/homepage.html">Lessons</a>
+            <a href="nav-link/feed.html">Feed</a>
+            <a href="nav-link/assistant.html">Assistant</a>
+            <a href="nav-link/pricing.html">Pricing</a>
+            <a href="../php/check_session.php">Account</a>
+        </nav>
+    </header>
+
+
+
+    <div class="box">
+    <h1>Login</h1>
+
+    <form action="../php/login_utente.php" method="POST">
+
+        <div class="inputBox">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="rossi.mario@gmail.com">
+        </div>
+
+        <div class="inputBox">
+            <span>Password</span>
+            <input type="password" name="password" required>
+        </div>
+
+        <input type="submit" value="Login" class="Login">
+
+    </form>
+
+    <div class="links">
+        <a href="#">Password dimenticata</a>
+        <a href="registrati.html">Register</a>
+    </div>
+</div>
+    <footer>
+        <p>© 2026 Finencial. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+
+    
+</body>
+</html>

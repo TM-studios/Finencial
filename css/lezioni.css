@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8; 
+    background-color: var(--bg);
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;        
+    margin: 0 auto;     
+    padding: 0 20px;
+    padding-top: 120px;
+}
+
+.headerLezione {
+    text-align: left;
+}
+
+.headerLezione h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.headerLezione h3 {
+    font-size: 15px;
+    color: gray;
+}
+
+.headerLezione .info-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.badge {
+    background-color: #252525;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #8f00ff;
+    border: 1px solid #333;
+    font-weight: bold;
+}
+
+.headerLezione img, 
+video,
+.contenutoLezione img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.contenutoLezione {
+    margin-top: 40px;
+}
+
+.contenutoLezione h2 {
+    position: relative;
+    display: inline-block; 
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.contenutoLezione h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #8f00ff, transparent);
+    border-radius: 2px;
+}
+
+.contenutoLezione p {
+    color: #cccccc; 
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.domande {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(145deg, #1a1a1a, #151515);
+    border-left: 4px solid var(--violet);
+    border-radius: 15px;
+    color: white;
+}
+
+.domande h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.domanda {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.domanda h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;              
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-container:hover {
+    background-color: #252525;
+}
+
+.radio-container input[type="radio"] {
+    min-width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    accent-color: #8f00ff;
+}
+
+.radio-container span {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    background-color: #8f00ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #7003c4;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        padding-top: 120px;
+    }
+    .headerLezione h1 {
+        font-size: 32px;
+    }
+    .headerLezione h3 {
+        font-size: 12px;
+    }
+    .contenutoLezione h2 {
+        font-size: 22px;
+    }
+    .contenutoLezione p {
+        font-size: 16px;
+    }
+    .domande h2 {
+        font-size: 22px;
+    }
+    .domande h3 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+
+
+.videoBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; 
+    transform: translate(-50%, -50%);
+    object-fit: cover; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.content h1 span {
+    position: relative;
+    text-decoration: none; /* Togliamo quella statica */
+}
+
+.content h1 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0; /* Parte da zero */
+    height: 5px;
+    background-color: var(--violet);
+    animation: lineaProgressiva 1s ease-out 2s forwards;
+}
+
+@keyframes lineaProgressiva {
+    to { width: 100%; }
+}
+
+.content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: rgb(235, 235, 235);
+}
+
+.btn {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*Bottone inizia ora*/
+.btn1{
+    background-color: var(--violet);
+    border: solid 2px var(--violet);
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.btn1:hover {
+    background-color: var(--violetGlass1);
+    transform: scale(1.02);
+}
+
+/*Bottone Scopri i corsi*/
+.btn2{
+    background-color: transparent;
+    border: solid 2px var(--violet);
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.btn2:hover {
+    background-color: var(--violetGlass1);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+
+    .content p {
+        font-size: 18px;
+    }
+
+}
+
+section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pilastri{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+.pilastri h1{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.cardContainer{
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.card{
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    border: solid 2px var(--gray);
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    background-color: var(--violetGlass1);
+    cursor: pointer;
+    border-color: var(--violet);
+    transform:scale(1.05) ;
+    cursor:default;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+    max-height: 80px;
+}
+
+.icon img{
+    width: 70px;
+    height: 70px;
+}
+
+.card h2{
+    margin: 25px 25px;
+    font-size: 25px;
+}
+
+.card p{
+    margin: 25px 25px;
+    font-size: 18px;
+    color: rgb(185, 185, 185);
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 350px;
+        height: auto;
+    }
+
+    .pilastri h1{
+        font-size: 40px;
+    }
+}
+
+section.trustBar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    background-color: var(--gray);
+    padding: 50px;
+}
+
+section.trustBar a img {
+    height: auto;
+    width: 150px;
+    filter: grayscale(100%) opacity(0.6); 
+    transition: 0.3s ease;
+}
+
+section.trustBar img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* --- SEZIONE STATS OTTIMIZZATA --- */
+.stats {
+    padding: 120px 20px; /* Aumentato lo spazio verticale */
+    background: radial-gradient(circle at center, #1e1e1e 0%, var(--bg) 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.stats h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #fff;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px; /* Spazio generoso tra i numeri */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item .number {
+    font-size: 50px; /* Numeri più grandi e d'impatto */
+    font-weight: 800;
+    color: var(--violet);
+    display: block;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #b0b0b0; /* Grigio chiaro per non appesantire */
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* --- ADATTAMENTO MOBILE --- */
+@media (max-width: 768px) {
+    .stats {
+        padding: 80px 15px;
+    }
+    
+    .stats h2 {
+        font-size: 1.8rem;
+    }
+
+    .stat-item .number {
+        font-size: 60px;
+    }
+    
+    .stats-grid {
+        gap: 40px;
+    }
+}
+
+/* --- STILE DESKTOP (Default) --- */
+.final-cta {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--violet);
+    color: white;
+}
+
+.final-cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 50px;
+    background: white;
+    color: var(--violet);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- ADATTAMENTO PER MOBILE (Smartphone) --- */
+@media (max-width: 768px) {
+    .final-cta {
+        padding: 60px 15px; /* Riduciamo il padding per non sprecare spazio */
+    }
+
+    .final-cta h2 {
+        font-size: 28px; /* Testo più piccolo per evitare che vada su troppe righe */
+    }
+
+    .final-cta p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .btn-main {
+        display: block; /* Il bottone diventa largo quanto lo schermo */
+        width: 100%; 
+        max-width: 300px; /* Ma non troppo largo */
+        margin: 30px auto 0; 
+        padding: 20px; /* Più alto per essere cliccato facilmente con il pollice */
+        font-size: 20px; /* Testo leggibile */
+    }
+}

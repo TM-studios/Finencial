@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 130px;
+}
+
+.container p{
+    color: #fff;
+    font-size: 50px;
+}
+
+.container p span{
+    text-decoration: underline; 
+    text-decoration-color: var(--violet); 
+    text-underline-offset: 4px;
+}
+
+.abbonamenti{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    height: 580px; /* Aumentato leggermente per dare respiro */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position: relative; /* Necessario per il badge del piano Advanced */
+    padding-bottom: 20px; /* Spazio interno sotto il bottone */
+
+
+    background: rgba(255, 255, 255, 0.05); /* Sfondo molto chiaro e trasparente */
+    backdrop-filter: blur(15px); /* Sfoca ciò che sta dietro */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordo sottile per definire la forma */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+.title{
+    margin: 25px 25px;
+    font-size: 32px;
+}
+
+.price, currency, amount{
+    margin: 25px 25px;
+    font-size: 32px;
+    justify-items: center;
+    align-items: center;
+}
+
+.period{
+    font-size: 15px;
+    color: gray;
+}
+
+ul {
+    margin: 25px;
+    list-style-image: url("../../icon/check.png");
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Fondamentale: occupa lo spazio vuoto */
+    padding-left: 20px; /* Spazio per le icone da sinistra */
+}
+
+.highlighted{
+    border: 2px solid var(--violet);
+    transform: scale(1.1);
+}
+
+.highlighted::before {
+    content: "PIÙ SCELTO";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--violet);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); /* Bagliore viola esterno */
+}
+
+
+ul li {
+    padding-left: 10px; /* Distanza tra icona e testo */
+    font-size: 14px;
+}
+
+.btn {
+    margin: 0 25px; /* Rimosso margin superiore perché spinto da flex-grow */
+    width: calc(100% - 50px); /* Assicura che sia largo uguale in tutte le card */
+    padding: 12px 20px;
+    border-radius: 20px;
+    background-color: var(--violet);
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid var(--violet);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: var(--violetGlass1);
+    cursor: pointer;
+}
+
+.confronto-piani {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-tabella {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tabella-titolo {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--gray);
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background-color: rgba(168, 85, 247, 0.1);
+    color: var(--violet);
+    padding: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--violet);
+}
+
+td {
+    padding: 18px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 15px;
+}
+
+/* Allineamento a sinistra per la prima colonna (descrizioni) */
+td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #ccc;
+}
+
+/* Effetto hover sulla riga */
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #fff;
+}
+
+/* Stile per icone ✅ e ❌ */
+tr td:not(:first-child) {
+    font-size: 18px;
+}
+
+/* Responsività per mobile */
+@media (max-width: 768px) {
+    .container-tabella {
+        overflow-x: auto;
+    }
+    table {
+        min-width: 600px; /* Permette lo scroll orizzontale su schermi piccoli */
+    }
+}

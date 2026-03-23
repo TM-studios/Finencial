@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrati</title>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/colori.css">
+    <link rel="stylesheet" href="../css/registrati.css">
+
+    <link rel="icon" href="../logo/icon.jpeg">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+    
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../logo/Gemini_Generated_Image_4a7n3m4a7n3m4a7n-removebg-preview.png" alt="Logo Finencial">
+            </a>
+        </div>
+
+        <button class="hamburger" aria-label="Apri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links">
+            <a href="nav-link/homepage.html">Lessons</a>
+            <a href="nav-link/feed.html">Feed</a>
+            <a href="nav-link/assistant.html">Assistant</a>
+            <a href="nav-link/pricing.html">Pricing</a>
+            <a href="../php/check_session.php">Account</a>
+        </nav>
+    </header>
+
+
+
+    <div class="box">
+    <h1>Registrati</h1>
+    
+    <!-- <form id="registerForm"> -->
+    <form action="../php/salva_utente.php" method="POST" id="registerForm">
+        <div class="info">
+            <div class="inputBox">
+                <span>Nome*</span>
+                <input type="text" name="nome" id="nome" required placeholder="Mario">
+            </div>
+            <div class="inputBox">
+                <span>Cognome*</span>
+                <input type="text" name="cognome" id="cognome" required placeholder="Rossi">
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="inputBox birth-group">
+                <span>Data di nascita*</span>
+                <div class="birth-inputs">
+                    <input type="number" name="day" id="day" placeholder="GG" min="1" max="31" required>
+                    <input type="number" name="month" id="month" placeholder="MM" min="1" max="12" required>
+                    <input type="number" name="year" id="year" placeholder="AAAA" min="1900" max="2026" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="inputBox">
+                <span>Sesso*</span>
+                <select name="sesso" id="sesso" required>
+                    <option value="" disabled selected>M / F</option>
+                    <option value="M">Maschio</option>
+                    <option value="F">Femmina</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>Nazionalità*</span>
+                <input type="text" name="nazionalita" id="nazionalita" required placeholder="Italiana">
+            </div>
+        </div>
+        
+        <div class="info">
+            <div class="inputBox prefisso-container">
+                <span>Prefisso</span>
+                <input type="text" name="prefisso" placeholder="+39">
+            </div>
+            <div class="inputBox">
+                <span>Telefono</span>
+                <input type="tel" name="telefono" placeholder="1234567890">
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <span>Email*</span>
+            <input type="email" name="email" id="email" required placeholder="rossi.mario@gmail.com">
+        </div>
+
+        <div class="info">
+            <div class="inputBox">
+                <span>Password*</span>
+                <input type="password" name="password" id="password" required placeholder="Password">
+            </div>
+            <div class="inputBox">
+                <span>Ripeti Password*</span>
+                <input type="password" id="confirmPassword" required placeholder="Ripeti password">
+            </div>
+        </div>
+
+        <p id="error-msg" style="color: #ff4d4d; font-size: 14px; margin-top: 10px; display: none;"></p>
+        <input type="submit" value="Registrati" class="Login">
+    </form>
+
+    <div class="links">
+        <a href="#">Password dimenticata</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+
+    <script src="../js/navbar.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+        // Riferimenti ai campi
+        const pass = document.getElementById('password').value;
+        const confirmPass = document.getElementById('confirmPassword').value;
+        const errorMsg = document.getElementById('error-msg');
+
+        // Reset del messaggio di errore
+        errorMsg.style.display = 'none';
+
+        // Controllo uguaglianza password
+        if (pass !== confirmPass) {
+            event.preventDefault(); // Blocca l'invio del form
+            errorMsg.innerText = "Le password non coincidono!";
+            errorMsg.style.display = 'block';
+
+            // Opzionale: evidenzia i bordi in rosso
+            document.getElementById('confirmPassword').style.borderColor = "#ff4d4d";
+        } else {
+            // Se tutto è ok, puoi procedere (es. invio dati al server)
+            alert("Registrazione effettuata con successo!");
+        }
+        });
+    </script>
+
+    
+</body>
+</html>
